@@ -1,0 +1,8 @@
+/server/target/
+/model4server/target/
+/client/target/
+/model4client/target/
+/server-old/target/
+/model4server-old/target/
+.DS_Store
+nb-configuration.xml
