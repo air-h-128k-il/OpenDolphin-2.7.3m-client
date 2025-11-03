@@ -10,7 +10,7 @@ import java.awt.Color;
  */
 public class StampRenderingHints {
 
-    private int fontSize = 12;
+    private int fontSize = 8;//12; inox
     private Color foreground;
     private Color background = Color.WHITE;
     private Color labelColor;
