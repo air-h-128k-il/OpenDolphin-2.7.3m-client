@@ -6,3 +6,4 @@
 /model4server-old/target/
 .DS_Store
 nb-configuration.xml
+nbactions.xml
