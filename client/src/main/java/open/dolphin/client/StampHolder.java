@@ -1,6 +1,7 @@
 package open.dolphin.client;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
@@ -74,7 +75,9 @@ public final class StampHolder extends AbstractComponentHolder implements Compon
         this.kartePane = kartePane;
         StampRenderingHints h = new StampRenderingHints();
         h.setShowStampName(Project.getBoolean("karte.show.stampName"));
-        setHints(h);      
+        setHints(h);
+//        Font font = new Font("SansSerif",Font.PLAIN,8);
+//        setFont(font);
         setForeground(foreGround);
         setBackground(background);
 //masuda^        

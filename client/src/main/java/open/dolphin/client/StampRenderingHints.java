@@ -10,14 +10,19 @@ import java.awt.Color;
  */
 public class StampRenderingHints {
 
-    private int fontSize = 8;//12; inox
+    private int fontSize;
     private Color foreground;
-    private Color background = Color.WHITE;
+    private Color background;// = Color.BLACK;//original WHITE??? air
     private Color labelColor;
     private int border = 0;
     private int cellSpacing = 2;
     private int cellPadding = 3;
     private boolean showStampName; 
+
+    public StampRenderingHints() {
+        this.fontSize = 0x4;
+        this.background = Color.BLACK;
+    }
 
     public int getFontSize() {
         return fontSize;
