@@ -1,7 +1,8 @@
 ##------------------------------------- start here
 ##   Bundle Template
 ##------------------------------------- template here
-<HTML><BODY><TT><FONT SIZE="${hints.getFontSize()" COLOR="${hints.getBackgroundAs16String()}">
+## html font size 1-7 inomata
+<HTML><BODY><TT><FONT SIZE="${hints.getFontSize()}" COLOR="${hints.getBackgroundAs16String()}">
 <TABLE BORDER="${hints.getBorder()}" CELLSPACING="${hints.getCellSpacing()}" CELLPADDING="${hints.getCellPadding()}">
 	<TR BGCOLOR="${hints.getLabelColorAs16String()}">
 #if (${hints.getShowStampName()})

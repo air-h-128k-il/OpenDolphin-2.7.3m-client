@@ -2055,14 +2055,14 @@ public class KarteEditor extends AbstractChartDocument implements IInfoModel, NC
  //masuda^                   
                     // 外来待合リスト以外から開いた場合はpvt.id = 0である
                     PatientVisitModel pvt = chart.getPatientVisit();                    
-                    //inox pvtdate を直接渡す
-                    String pvtdate =pvt.getPvtDate();
-                    if(pvtdate == null){
-                        //do nothing?
-                    }else{
-                        model.getDocInfoModel().setPvtdate(pvtdate);
-                        Logger.getLogger("open.ocean").log(Level.INFO, "pvtdate:{0}", pvtdate);
-                    }
+//                    //inox pvtdate を直接渡す -> やっぱり、なし
+//                    String pvtdate =pvt.getPvtDate();
+//                    if(pvtdate == null){
+//                        //do nothing?
+//                    }else{
+//                        model.getDocInfoModel().setPvtdate(pvtdate);
+//                        Logger.getLogger("open.ocean").log(Level.INFO, "pvtdate:{0}", pvtdate);
+//                    }
  
                     if (sendClaim && pvt.getId()!=0L && !pvt.isFromSchedule()) {
  
@@ -2110,28 +2110,28 @@ public class KarteEditor extends AbstractChartDocument implements IInfoModel, NC
                        nleft -= stext.count;
                        offs += stext.count;
                     }
-//                    sb.append(Separator+"<P>"+Separator);
+                    sb.append(Separator+"<P>"+Separator);
                     List<ModuleModel> listMp = model.getModules();
                     for(ModuleModel mpmodel:listMp){
                        if(mpmodel.getModuleInfoBean().getEntity().equals("baseChargeOrder")){
-//                            BundleDolphin bundleD = (BundleDolphin)mpmodel.getModel();
-//                            sb.append( bundleD.getOrderName()+"("+ mpmodel.getModuleInfoBean().getStampName() +")"+Separator
-//                                    +bundleD.getItemNames()+Separator+Separator);
+                            BundleDolphin bundleD = (BundleDolphin)mpmodel.getModel();
+                            sb.append( bundleD.getOrderName()+"("+ mpmodel.getModuleInfoBean().getStampName() +")"+Separator
+                                    +bundleD.getItemNames()+Separator+Separator);
                         }else if(mpmodel.getModuleInfoBean().getEntity().equals("medOrder")){
-//                            BundleMed bundleM = (BundleMed)mpmodel.getModel();
-//                            sb.append( bundleM.toString()+Separator+Separator);                      
+                            BundleMed bundleM = (BundleMed)mpmodel.getModel();
+                            sb.append( bundleM.toString()+Separator+Separator);                      
                         }else if(mpmodel.getModuleInfoBean().getEntity().equals("testOrder")){
-//                            BundleDolphin bundleD = (BundleDolphin)mpmodel.getModel();
-//                            sb.append(bundleD.getOrderName()+"("+mpmodel.getModuleInfoBean().getStampName()+")"+Separator
-//                                    +bundleD.getItemNames()+Separator+Separator);
+                            BundleDolphin bundleD = (BundleDolphin)mpmodel.getModel();
+                            sb.append(bundleD.getOrderName()+"("+mpmodel.getModuleInfoBean().getStampName()+")"+Separator
+                                    +bundleD.getItemNames()+Separator+Separator);
                         }else if(mpmodel.getModuleInfoBean().getEntity().equals("generalOrder")){
-//                            BundleDolphin bundleD = (BundleDolphin)mpmodel.getModel();
-//                            sb.append(bundleD.getOrderName()+"("+mpmodel.getModuleInfoBean().getStampName()+")"+Separator
-//                                    +bundleD.getItemNames()+Separator+Separator);
+                            BundleDolphin bundleD = (BundleDolphin)mpmodel.getModel();
+                            sb.append(bundleD.getOrderName()+"("+mpmodel.getModuleInfoBean().getStampName()+")"+Separator
+                                    +bundleD.getItemNames()+Separator+Separator);
                         }else if(mpmodel.getModuleInfoBean().getEntity().equals("otherOrder")){
-//                            BundleDolphin bundleD = (BundleDolphin)mpmodel.getModel();
-//                            sb.append(bundleD.getOrderName()+"("+mpmodel.getModuleInfoBean().getStampName()+")"+Separator
-//                                    +bundleD.getItemNames()+Separator+Separator);
+                            BundleDolphin bundleD = (BundleDolphin)mpmodel.getModel();
+                            sb.append(bundleD.getOrderName()+"("+mpmodel.getModuleInfoBean().getStampName()+")"+Separator
+                                    +bundleD.getItemNames()+Separator+Separator);
                         }else{
                             //他不明
                         }                                                
